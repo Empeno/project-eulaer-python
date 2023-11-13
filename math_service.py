@@ -1,21 +1,24 @@
+"""
+MathService module: Provides mathematical services.
+
+MathService class:
+- sum_of_multiples(self, limit): Calculate sum of multiples of 3 or 5 below the limit.
+"""
 class MathService:
     """
-    A class that provides mathematical services.
-
-    Methods:
-    - sum_of_multiples(self, limit): Calculates the sum of multiples of 3 or 5
-      below the specified limit.
+    MathService class methods:
+    - sum_of_multiples(self, limit): Calculate sum of multiples of 3 or 5 below the limit.
     """
 
     def sum_of_multiples(self, limit):
         """
-        Calculate the sum of multiples of 3 or 5 below the specified limit.
+        Calculate sum of multiples of 3 or 5 below the limit.
 
         Parameters:
-        - limit (int): The upper limit for calculating the sum of multiples.
+        - limit (int): Upper limit for sum calculation.
 
         Returns:
-        - int: The sum of multiples of 3 or 5 below the specified limit.
+        - int: Sum of multiples of 3 or 5 below the limit.
         """
         result = 0
         for i in range(limit):
