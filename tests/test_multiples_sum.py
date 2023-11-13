@@ -2,7 +2,7 @@
 Test module for MathService: Tests the sum_of_multiples method.
 """
 
-from math_service import MathService
+from services.math_service import MathService
 
 def test_sum_of_multiples():
     """
