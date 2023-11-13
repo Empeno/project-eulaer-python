@@ -37,4 +37,10 @@ jobs:
       - name: Run Linting and Tests
         run: |
           pylint $(git ls-files '*.py') &
-          pytest
+          pytest --junitxml=pytest-report.xml
+
+      - name: Upload test results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: pytest-report.xml
