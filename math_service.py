@@ -3,7 +3,8 @@ class MathService:
     A class that provides mathematical services.
 
     Methods:
-    - sum_of_multiples(self, limit): Calculates the sum of multiples of 3 or 5 below the specified limit.
+    - sum_of_multiples(self, limit): Calculates the sum of multiples of 3 or 5
+      below the specified limit.
     """
 
     def sum_of_multiples(self, limit):
