@@ -8,7 +8,8 @@ from math_service import MathService
 result = MathService().sum_of_multiples(1000)
 print("Sum of multiples of 3 or 5 below 1000:", result)
 """
-from math_service import MathService
+from services.math_service import MathService
 
-result = MathService().sum_of_multiples(1000)
+math_service_instance = MathService()
+result = math_service_instance.sum_of_multiples(1000)
 print("Sum of multiples of 3 or 5 below 1000:", result)

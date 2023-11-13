@@ -43,3 +43,20 @@ class MathService:
             if i % x == 0 or i % y == 0:
                 result += i
         return result
+    
+
+    def fibonacci_sum(self, limit):
+        # gets sum of even fibonaccis
+        a, b = 1, 2
+        even_sum = 0
+
+        while a <= limit:
+            if a % 2 == 0:
+                even_sum += a
+            #The following three lines are the same as: a, b = b, a + b
+            new_a = b
+            new_b = a + b
+            a, b = new_a, new_b
+
+        return even_sum
+    
