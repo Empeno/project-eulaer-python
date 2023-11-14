@@ -1,11 +1,11 @@
-from problem_two import main
-from services.math_service import MathService
 import pytest
+from problem_two import main
 
-@pytest.fixture
+
+@pytest.fixture(name='Setup Mock')
 def math_service_mock():
     class MathServiceMock:
-        def fibonacci_sum(self, limit):
+        def fibonacci_sum(self, limit):            
             return 42
 
     return MathServiceMock()
