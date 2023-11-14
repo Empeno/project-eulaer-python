@@ -14,6 +14,8 @@ def math_service_instance():
 def math_service_mock():
     class MathServiceMock:
         def sum_of_multiples(self, limit):
+            if limit is None:
+                return None
             return 42
 
     return MathServiceMock()
