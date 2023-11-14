@@ -1,9 +1,9 @@
-name: Pylint and Pytest
+name: Main Pipeline
 
 on:
   push:
     branches:
-      - main  # Adjust this to your main branch name
+      - main  
   workflow_dispatch:
 
 jobs:
@@ -34,10 +34,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt          
 
-      - name: Run Linting and Tests
-        run: |
-          pylint $(git ls-files '*.py') &
+      - name: Run Linting
+        run: |          
           pytest tests/ --junitxml=pytest-report.xml --html=pytest-report.html
+      
+      - name: Run Tests
+        run: |
+          pylint $(git ls-files '*.py') &          
 
       - name: Upload test results
         uses: actions/upload-artifact@v2
