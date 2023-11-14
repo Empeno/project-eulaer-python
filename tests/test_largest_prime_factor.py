@@ -50,8 +50,6 @@ def test_prime_factor_of_negative_number():
     # Test for a negative number
     obj = PrimeFactorService()
     result = obj.largest_prime_factor(-20)
-    assert result == None, "The function should return None for negative numbers"
+    assert result is None, "The function should return None for negative numbers"
     # Add assertion to verify behavior with negative input
     # (assuming your implementation returns None for negative numbers)
-
-    
