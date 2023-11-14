@@ -34,9 +34,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt          
 
-      - name: Run Linting and Tests
+      - name: Run Linting
         run: |
-          pylint $(git ls-files '*.py') &
+          pylint $(git ls-files '*.py')
+
+      - name: Run Tests
+        run: |
           pytest tests/ --junitxml=pytest-report.xml --html=pytest-report.html
 
       - name: Upload test results
@@ -46,4 +49,3 @@ jobs:
           path: |
             pytest-report.xml
             pytest-report.html
-            
