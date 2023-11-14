@@ -13,7 +13,7 @@ def math_service_instance():
 @pytest.fixture
 def math_service_mock():
     class MathServiceMock:
-        def sum_of_multiples(self, limit):            
+        def sum_of_multiples(self, limit):
             return 42
 
     return MathServiceMock()
