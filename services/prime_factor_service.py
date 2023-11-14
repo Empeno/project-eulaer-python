@@ -1,7 +1,7 @@
 class PrimeFactorService:
 
     def largest_prime_factor(self, n):
-        if n <= 1:
+        if n < 1:
             return None
         i = 2
         while i * i <= n:
