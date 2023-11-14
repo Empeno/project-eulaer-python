@@ -37,5 +37,4 @@ def test_prime_factor_of_negative_number():
     prime_factor_service_instance = PrimeFactorService()
     result = prime_factor_service_instance.largest_prime_factor(-20)
     assert result is None, "The function should return None for negative numbers"
-    # Add assertion to verify behavior with negative input
-    # (assuming your implementation returns None for negative numbers)
+    
