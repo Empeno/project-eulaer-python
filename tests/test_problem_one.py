@@ -5,12 +5,12 @@ from services.math_service import MathService
 
 
 
-@pytest.fixture
+@pytest.fixture(Name = 'Math Service')
 def math_service_instance():
     return MathService()
 
 
-@pytest.fixture
+@pytest.fixture(Name = 'Mocked Math Service')
 def math_service_mock():
     class MathServiceMock:
         def sum_of_multiples(self, limit):
