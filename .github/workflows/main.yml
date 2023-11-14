@@ -86,14 +86,7 @@ jobs:
 
       - name: Run PyLint
         run: |
-          pylint $(git ls-files '*.py')
-
-  cleanup:
-    runs-on: ubuntu-latest
-    needs: [run-tests, run-linting]
-    steps:
-      - name: Clean up environment
-        # ...
+          pylint $(git ls-files '*.py')        
 
   handle-errors:
     runs-on: ubuntu-latest
