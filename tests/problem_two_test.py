@@ -2,7 +2,7 @@ import pytest
 from problem_two import main
 
 
-@pytest.fixture(name='Setup Mock')
+@pytest.fixture
 def math_service_mock():
     class MathServiceMock:
         def fibonacci_sum(self, limit):
