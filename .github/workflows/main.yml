@@ -46,14 +46,4 @@ jobs:
           path: |
             pytest-report.xml
             pytest-report.html
-  
-  lint-and-test:
-    runs-on: ubuntu-latest
-    
-    steps:      
-      - name: Run Linting and Tests
-        run: |
-          pylint $(git ls-files '*.py') &
-          pytest tests/ --junitxml=pytest-report.xml --html=pytest-report.html
-
-
+            
